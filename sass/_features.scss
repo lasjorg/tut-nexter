@@ -1,4 +1,35 @@
 .features {
-  background-color: $color-grey-light-2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  /* 30rem gives less text wrapping, looks better imo */
+  /* grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); */
+  grid-gap: 6rem;
+  margin: 15rem 0;
+  /* Using explicit rows with min-content on the feature class
+   * seems to do the same as align-items: start */
+  /*align-items: start;*/
+
+  /* features section placement in site layout */
   grid-column: center-start / center-end;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content min-content;
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 1.5rem;
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+
 }
