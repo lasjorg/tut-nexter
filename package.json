@@ -16,7 +16,7 @@
   "author": "Jonas",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^8.4.1",
+    "autoprefixer": "^9.8.0",
     "concat": "^1.0.3",
     "del-cli": "^1.1.0",
     "node-sass": "^4.8.3",
